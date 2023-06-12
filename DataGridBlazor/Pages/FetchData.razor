@@ -1,5 +1,6 @@
 ﻿@page "/fetchdata"
 @using DataGridBlazor.Data
+@using Microsoft.AspNetCore.Components.QuickGrid
 @inject WeatherForecastService ForecastService
 
 <PageTitle>Weather forecast</PageTitle>
@@ -14,12 +15,16 @@
 }
 else
 {
-    <QuickGrid Items="forecasts.AsQueryable()">
+    <QuickGrid>
+
+    </QuickGrid>
+
+    @*<QuickGrid Items="forecasts.AsQueryable()">
         <PropertyColumn Property="f => f.Date" />
         <PropertyColumn Property="f => f.TemperatureC" />
         <PropertyColumn Property="f => f.TemperatureF" />
         <PropertyColumn Property="f => f.Summary" />
-    </QuickGrid>
+    </QuickGrid>*@
 
     <table class="table">
         <thead>
