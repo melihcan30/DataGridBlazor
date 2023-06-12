@@ -14,6 +14,13 @@
 }
 else
 {
+    <QuickGrid Items="forecasts.AsQueryable()">
+        <PropertyColumn Property="f => f.Date" />
+        <PropertyColumn Property="f => f.TemperatureC" />
+        <PropertyColumn Property="f => f.TemperatureF" />
+        <PropertyColumn Property="f => f.Summary" />
+    </QuickGrid>
+
     <table class="table">
         <thead>
             <tr>
